@@ -23,6 +23,7 @@ Partial Class frmroomsData
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmroomsData))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -48,9 +49,9 @@ Partial Class frmroomsData
         Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmroomsData))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.closee = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnupdate = New System.Windows.Forms.Button()
@@ -107,7 +108,6 @@ Partial Class frmroomsData
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.closee = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.roomreg_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -161,6 +161,20 @@ Partial Class frmroomsData
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Rooms Registration"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'closee
+        '
+        Me.closee.BackColor = System.Drawing.Color.Transparent
+        Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
+        Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.closee.ForeColor = System.Drawing.Color.Transparent
+        Me.closee.Location = New System.Drawing.Point(1296, 4)
+        Me.closee.Margin = New System.Windows.Forms.Padding(4)
+        Me.closee.Name = "closee"
+        Me.closee.Size = New System.Drawing.Size(34, 33)
+        Me.closee.TabIndex = 393
+        Me.closee.UseVisualStyleBackColor = False
         '
         'Label6
         '
@@ -400,7 +414,7 @@ Partial Class frmroomsData
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1327, 721)
+        Me.TabPage2.Size = New System.Drawing.Size(1337, 772)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Room Reservation"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -729,7 +743,7 @@ Partial Class frmroomsData
         Me.TabPage3.Location = New System.Drawing.Point(4, 25)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1327, 721)
+        Me.TabPage3.Size = New System.Drawing.Size(1337, 772)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Reserved Rooms"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -811,7 +825,7 @@ Partial Class frmroomsData
         Me.TabPage4.Location = New System.Drawing.Point(4, 25)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1327, 721)
+        Me.TabPage4.Size = New System.Drawing.Size(1337, 772)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Cancelled Reservations"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -960,20 +974,6 @@ Partial Class frmroomsData
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1288, 590)
         Me.DataGridView1.TabIndex = 187
-        '
-        'closee
-        '
-        Me.closee.BackColor = System.Drawing.Color.Transparent
-        Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
-        Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.closee.ForeColor = System.Drawing.Color.Transparent
-        Me.closee.Location = New System.Drawing.Point(1296, 4)
-        Me.closee.Margin = New System.Windows.Forms.Padding(4)
-        Me.closee.Name = "closee"
-        Me.closee.Size = New System.Drawing.Size(34, 33)
-        Me.closee.TabIndex = 393
-        Me.closee.UseVisualStyleBackColor = False
         '
         'frmroomsData
         '

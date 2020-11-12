@@ -110,6 +110,7 @@ Public Class frmroomsData
 
         txtboxid()
         getdata()
+        status_lbl.Text = "Available"
         roomtype_txt.Text = ""
         roomrate_txt.Text = ""
         roomtype_txt.Enabled = True
@@ -394,7 +395,7 @@ Public Class frmroomsData
         btnsave_reser.Enabled = False
         btndelete_rserve.Enabled = True
         btnupdate_rserv.Enabled = True
-        Button1.Enabled = False
+        Button1.Enabled = True
     End Sub
     'Tab 3 contains the data of customer who reserved the room with some rooms details.
     Private Sub getdata_roomsdetails()
@@ -570,5 +571,13 @@ Public Class frmroomsData
 
     Private Sub closee_Click(sender As Object, e As EventArgs) Handles closee.Click
         Me.Dispose()
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
     End Sub
 End Class
