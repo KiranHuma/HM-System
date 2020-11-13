@@ -70,11 +70,29 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCheckin_out.Designer.vb">
+      <DependentUpon>FrmCheckin_out.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheckin_out.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmdashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmdashboard.Designer.vb">
       <DependentUpon>frmdashboard.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmlogin.Designer.vb">
+      <DependentUpon>Frmlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frmlogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPayment.Designer.vb">
+      <DependentUpon>FrmPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPayment.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmroomsData.Designer.vb">
@@ -106,8 +124,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmCheckin_out.resx">
+      <DependentUpon>FrmCheckin_out.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmdashboard.resx">
       <DependentUpon>frmdashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmlogin.resx">
+      <DependentUpon>Frmlogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPayment.resx">
+      <DependentUpon>FrmPayment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmroomsData.resx">
       <DependentUpon>frmroomsData.vb</DependentUpon>

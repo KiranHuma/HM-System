@@ -123,6 +123,7 @@ Partial Class frmroomsData
         '
         'TabControl1
         '
+        Me.TabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
@@ -154,10 +155,10 @@ Partial Class frmroomsData
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.btndel)
         Me.TabPage1.Controls.Add(Me.btnsave)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1337, 772)
+        Me.TabPage1.Size = New System.Drawing.Size(1337, 769)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Rooms Registration"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -168,7 +169,7 @@ Partial Class frmroomsData
         Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
         Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.closee.ForeColor = System.Drawing.Color.Transparent
+        Me.closee.ForeColor = System.Drawing.SystemColors.Control
         Me.closee.Location = New System.Drawing.Point(1296, 4)
         Me.closee.Margin = New System.Windows.Forms.Padding(4)
         Me.closee.Name = "closee"
@@ -266,7 +267,7 @@ Partial Class frmroomsData
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
         Me.roomreg_Grid.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.roomreg_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.roomreg_Grid.Size = New System.Drawing.Size(701, 703)
+        Me.roomreg_Grid.Size = New System.Drawing.Size(701, 700)
         Me.roomreg_Grid.TabIndex = 151
         '
         'btnadd
@@ -300,9 +301,10 @@ Partial Class frmroomsData
         'welcomemsg
         '
         Me.welcomemsg.AutoSize = True
+        Me.welcomemsg.Font = New System.Drawing.Font("MV Boli", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.welcomemsg.Location = New System.Drawing.Point(35, 476)
         Me.welcomemsg.Name = "welcomemsg"
-        Me.welcomemsg.Size = New System.Drawing.Size(0, 17)
+        Me.welcomemsg.Size = New System.Drawing.Size(0, 31)
         Me.welcomemsg.TabIndex = 10
         '
         'roomtype_txt
@@ -411,10 +413,10 @@ Partial Class frmroomsData
         Me.TabPage2.Controls.Add(Me.Label12)
         Me.TabPage2.Controls.Add(Me.btndelete_rserve)
         Me.TabPage2.Controls.Add(Me.btnsave_reser)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1337, 772)
+        Me.TabPage2.Size = New System.Drawing.Size(1337, 769)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Room Reservation"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -422,7 +424,7 @@ Partial Class frmroomsData
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.ForeColor = System.Drawing.Color.Transparent
+        Me.Label19.ForeColor = System.Drawing.SystemColors.Control
         Me.Label19.Location = New System.Drawing.Point(539, 590)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(57, 17)
@@ -512,7 +514,7 @@ Partial Class frmroomsData
         Me.reservation_Grid.DefaultCellStyle = DataGridViewCellStyle8
         Me.reservation_Grid.EnableHeadersVisualStyles = False
         Me.reservation_Grid.GridColor = System.Drawing.Color.LightCoral
-        Me.reservation_Grid.Location = New System.Drawing.Point(636, 114)
+        Me.reservation_Grid.Location = New System.Drawing.Point(636, 112)
         Me.reservation_Grid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.reservation_Grid.Name = "reservation_Grid"
         Me.reservation_Grid.ReadOnly = True
@@ -603,7 +605,7 @@ Partial Class frmroomsData
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.ForeColor = System.Drawing.Color.Transparent
+        Me.Label7.ForeColor = System.Drawing.SystemColors.Control
         Me.Label7.Location = New System.Drawing.Point(472, 590)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(57, 17)
@@ -613,7 +615,7 @@ Partial Class frmroomsData
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.ForeColor = System.Drawing.Color.Transparent
+        Me.Label8.ForeColor = System.Drawing.SystemColors.Control
         Me.Label8.Location = New System.Drawing.Point(333, 590)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(57, 17)
@@ -740,10 +742,10 @@ Partial Class frmroomsData
         '
         Me.TabPage3.Controls.Add(Me.Button6)
         Me.TabPage3.Controls.Add(Me.reservedgrid)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 28)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1337, 772)
+        Me.TabPage3.Size = New System.Drawing.Size(1337, 769)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Reserved Rooms"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -796,7 +798,7 @@ Partial Class frmroomsData
         Me.reservedgrid.DefaultCellStyle = DataGridViewCellStyle13
         Me.reservedgrid.EnableHeadersVisualStyles = False
         Me.reservedgrid.GridColor = System.Drawing.Color.LightCoral
-        Me.reservedgrid.Location = New System.Drawing.Point(21, 135)
+        Me.reservedgrid.Location = New System.Drawing.Point(21, 133)
         Me.reservedgrid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.reservedgrid.Name = "reservedgrid"
         Me.reservedgrid.ReadOnly = True
@@ -822,10 +824,10 @@ Partial Class frmroomsData
         'TabPage4
         '
         Me.TabPage4.Controls.Add(Me.cancell_Grid)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 28)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1337, 772)
+        Me.TabPage4.Size = New System.Drawing.Size(1337, 769)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Cancelled Reservations"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -865,7 +867,7 @@ Partial Class frmroomsData
         Me.cancell_Grid.DefaultCellStyle = DataGridViewCellStyle18
         Me.cancell_Grid.EnableHeadersVisualStyles = False
         Me.cancell_Grid.GridColor = System.Drawing.Color.LightCoral
-        Me.cancell_Grid.Location = New System.Drawing.Point(19, 39)
+        Me.cancell_Grid.Location = New System.Drawing.Point(19, 37)
         Me.cancell_Grid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cancell_Grid.Name = "cancell_Grid"
         Me.cancell_Grid.ReadOnly = True
@@ -893,10 +895,10 @@ Partial Class frmroomsData
         Me.TabPage5.Controls.Add(Me.Label21)
         Me.TabPage5.Controls.Add(Me.TextBox3)
         Me.TabPage5.Controls.Add(Me.DataGridView1)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 28)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1337, 772)
+        Me.TabPage5.Size = New System.Drawing.Size(1337, 769)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Search"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -952,7 +954,7 @@ Partial Class frmroomsData
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle23
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.GridColor = System.Drawing.Color.LightCoral
-        Me.DataGridView1.Location = New System.Drawing.Point(24, 137)
+        Me.DataGridView1.Location = New System.Drawing.Point(24, 135)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True

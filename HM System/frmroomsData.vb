@@ -1,12 +1,5 @@
-﻿Imports System.Data
-Imports System.Data.OleDb
-Imports System.Data.Odbc
-Imports System.Data.DataTable
+﻿
 Imports System.Data.SqlClient   'FOR SQL CONNECTION AND COMMAND.
-Imports System.IO
-Imports System.Drawing.Imaging
-Imports System.Security.Cryptography
-Imports System.Text
 
 Public Class frmroomsData
     Private bitmap As Bitmap 'for print grid
@@ -34,16 +27,7 @@ Public Class frmroomsData
             Me.Dispose()
         End Try
     End Sub
-    Private Sub frmroomsData_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dbaccessconnection()
-        txtboxid()
-        getdata()
-        search_txt_grid()
-        txtboxid_reserve()
-        getdata_reserve()
-        getdata_roomsdetails()
-        getdata_cancellroomsdetails()
-    End Sub
+    'insert data into database
     Private Sub insert()
         Try
             dbaccessconnection()
@@ -59,7 +43,6 @@ Public Class frmroomsData
             Me.Dispose()
         End Try
     End Sub
-    '
     'this function will autoincrement the rommnumber
     Private Sub txtboxid()
         Try
@@ -82,14 +65,7 @@ Public Class frmroomsData
         End Try
 
     End Sub
-    'funtion of insert called on btnsave
-    Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
-        insert()
-        getdata_reserve()
-        getdata_roomsdetails()
-    End Sub
     'Show data of room registration in grid
-
     Private Sub getdata()
         Try
             Dim con As New SqlConnection(cs)
@@ -107,7 +83,6 @@ Public Class frmroomsData
     End Sub
     'this function will empty the textboxes,auto increment room number and get updated data
     Private Sub fun_addnew()
-
         txtboxid()
         getdata()
         status_lbl.Text = "Available"
@@ -119,9 +94,6 @@ Public Class frmroomsData
 
         btndel.Enabled = False
         btnupdate.Enabled = False
-    End Sub
-    Private Sub btnadd_Click(sender As Object, e As EventArgs) Handles btnadd.Click
-        fun_addnew()
     End Sub
     'edit function
     Private Sub edit()
@@ -172,23 +144,7 @@ Public Class frmroomsData
             Me.Dispose()
         End Try
     End Sub
-
-    Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
-        edit()
-        getdata()
-
-    End Sub
-
-    Private Sub btndel_Click(sender As Object, e As EventArgs) Handles btndel.Click
-        DeleteSelecedRows()
-    End Sub
-
-    Private Sub roomreg_Grid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles roomreg_Grid.CellContentClick
-        btnsave.Enabled = False
-        btndel.Enabled = True
-        btnupdate.Enabled = True
-    End Sub
-
+    'populate the textboxes from grid
     Private Sub roomreg_Grid_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles roomreg_Grid.CellMouseClick
         Try
             btnsave.Enabled = False
@@ -205,9 +161,7 @@ Public Class frmroomsData
             Me.Dispose()
         End Try
     End Sub
-
-
-
+    'popup
     Private Sub Label5_MouseHover(sender As Object, e As EventArgs) Handles Label5.MouseHover
         If btnupdate.Enabled = False Then
             ToolTip1.IsBalloon = True
@@ -221,7 +175,6 @@ Public Class frmroomsData
             ToolTip1.SetToolTip(Label5, "Click to Edit")
         End If
     End Sub
-
 
     Private Sub Label6_MouseHover(sender As Object, e As EventArgs) Handles Label6.MouseHover
         If btndel.Enabled = False Then
@@ -253,6 +206,7 @@ Public Class frmroomsData
             Me.Dispose()
         End Try
     End Sub
+    'change the status of available to reserved
     Private Sub update_reserve_status()
         con.Close()
         Try
@@ -266,6 +220,7 @@ Public Class frmroomsData
             MessageBox.Show("Data Not Updated" & ex.Message)
         End Try
     End Sub
+    'for Cancellation of Reservation and set it to available
     Private Sub update_Cancell_status()
         con.Close()
         Try
@@ -279,6 +234,7 @@ Public Class frmroomsData
             MessageBox.Show("Data Not Updated" & ex.Message)
         End Try
     End Sub
+    'for Cancellation of Reservation 
     Private Sub update_Cancellreserved_status()
         con.Close()
         Try
@@ -292,14 +248,8 @@ Public Class frmroomsData
             MessageBox.Show("Data Not Updated" & ex.Message)
         End Try
     End Sub
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnsave_reser.Click
-        status_lbl.Text = "Reserved"
-        insert_reserve()
-        update_reserve_status()
-        getdata_reserve()
-        getdata_roomsdetails()
-    End Sub
 
+    'autoincrement of entry number of reservation
     Private Sub txtboxid_reserve()
         Try
             dbaccessconnection()
@@ -322,12 +272,11 @@ Public Class frmroomsData
 
     End Sub
     'Show data of availabe rooms in grid
-
     Private Sub getdata_reserve()
         Try
             Dim con As New SqlConnection(cs)
             con.Open()
-            Dim da As New SqlDataAdapter("Select * from db_roomreg where  Reservation_Status='Available'", con)
+            Dim da As New SqlDataAdapter("Select * from db_roomreg where Reservation_Status='Available'", con)
             Dim dt As New DataTable
             da.Fill(dt)
             source2.DataSource = dt
@@ -369,10 +318,6 @@ Public Class frmroomsData
             Me.Dispose()
         End Try
     End Sub
-
-    Private Sub reservation_Grid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles reservation_Grid.CellContentClick
-
-    End Sub
     'the data of room from gird will transfer to textboxes on mouse click.
     Private Sub reservation_Grid_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles reservation_Grid.CellMouseClick
         Try
@@ -413,6 +358,7 @@ Public Class frmroomsData
             Me.Dispose()
         End Try
     End Sub
+    'get the data of cancelled reservation
     Private Sub getdata_cancellroomsdetails()
         Try
             Dim con As New SqlConnection(cs)
@@ -428,6 +374,7 @@ Public Class frmroomsData
             Me.Dispose()
         End Try
     End Sub
+    'add new record
     Private Sub addnew_reservation()
         txtboxid_reserve()
         customer_txt.Text = ""
@@ -444,7 +391,7 @@ Public Class frmroomsData
         getdata_reserve()
         getdata_roomsdetails()
     End Sub
-
+    'populate the data from grid to textboxes
     Private Sub reservedgrid_MouseClick(sender As Object, e As MouseEventArgs) Handles reservedgrid.MouseClick
         Try
             TabControl1.SelectedTab = TabPage2
@@ -513,7 +460,7 @@ Public Class frmroomsData
 
         DeleteSelecedRows_reserve()
     End Sub
-    'search customer name in grid
+    'rservation data in grid
 
     Private Sub search_txt_grid()
         Try
@@ -530,6 +477,7 @@ Public Class frmroomsData
             Me.Dispose()
         End Try
     End Sub
+    'search customer name by textboxes
     Private Sub search_txt()
         Dim str As String
         Try
@@ -573,11 +521,45 @@ Public Class frmroomsData
         Me.Dispose()
     End Sub
 
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+    Private Sub frmroomsData_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dbaccessconnection()
+        txtboxid()
+        getdata()
+        search_txt_grid()
+        txtboxid_reserve()
+        getdata_reserve()
+        getdata_roomsdetails()
+        getdata_cancellroomsdetails()
+    End Sub
+    'funtion of insert called on btnsave
+    Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
+        insert()
+        getdata_reserve()
+        getdata_roomsdetails()
+    End Sub
+    Private Sub btnadd_Click(sender As Object, e As EventArgs) Handles btnadd.Click
+        fun_addnew()
+    End Sub
+    Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
+        edit()
+        getdata()
 
     End Sub
 
-    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+    Private Sub btndel_Click(sender As Object, e As EventArgs) Handles btndel.Click
+        DeleteSelecedRows()
+    End Sub
 
+    Private Sub roomreg_Grid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles roomreg_Grid.CellContentClick
+        btnsave.Enabled = False
+        btndel.Enabled = True
+        btnupdate.Enabled = True
+    End Sub
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnsave_reser.Click
+        status_lbl.Text = "Reserved"
+        insert_reserve()
+        update_reserve_status()
+        getdata_reserve()
+        getdata_roomsdetails()
     End Sub
 End Class
