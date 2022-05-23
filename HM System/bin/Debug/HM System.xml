@@ -22,5 +22,30 @@ HM System
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:HM_System.My.Resources.Resources.checkin">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HM_System.My.Resources.Resources.checkout">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HM_System.My.Resources.Resources.hotel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HM_System.My.Resources.Resources.occupiedroom">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HM_System.My.Resources.Resources.rooms">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>

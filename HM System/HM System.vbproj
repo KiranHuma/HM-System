@@ -160,5 +160,20 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rooms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\occupiedroom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

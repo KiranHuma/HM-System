@@ -17,7 +17,7 @@ Public Class FrmCheckin_out
     Dim con As New SqlConnection
     Dim cmd As New SqlCommand
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=DESKTOP-H2H8TNI;Initial Catalog=db_hmsystem;Integrated Security=True"
+    Dim cs As String = "Data Source=ANIRUDH;Initial Catalog=db_hmsystem;Integrated Security=True"
     'Database Connection
     Private Sub dbaccessconnection()
         Try
@@ -165,5 +165,9 @@ Public Class FrmCheckin_out
     End Sub
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         searchcustomer_checkin()
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
     End Sub
 End Class
