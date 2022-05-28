@@ -656,7 +656,7 @@ Partial Class FrmPayment
         Me.payment_Grid.DefaultCellStyle = DataGridViewCellStyle3
         Me.payment_Grid.EnableHeadersVisualStyles = False
         Me.payment_Grid.GridColor = System.Drawing.Color.LightCoral
-        Me.payment_Grid.Location = New System.Drawing.Point(8, 134)
+        Me.payment_Grid.Location = New System.Drawing.Point(22, 152)
         Me.payment_Grid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.payment_Grid.Name = "payment_Grid"
         Me.payment_Grid.ReadOnly = True
@@ -676,7 +676,7 @@ Partial Class FrmPayment
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
         Me.payment_Grid.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.payment_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.payment_Grid.Size = New System.Drawing.Size(1301, 575)
+        Me.payment_Grid.Size = New System.Drawing.Size(1251, 519)
         Me.payment_Grid.TabIndex = 172
         '
         'FrmPayment

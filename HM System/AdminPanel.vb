@@ -35,8 +35,9 @@ Public Class AdminPanel
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
+
         AddUsers.ShowDialog()
+        Me.Close()
     End Sub
     Private Sub usersdata()
         Try

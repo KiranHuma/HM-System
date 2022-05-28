@@ -423,7 +423,7 @@ Partial Class frmdashboard
         'username_lbl
         '
         Me.username_lbl.AutoSize = True
-        Me.username_lbl.Location = New System.Drawing.Point(1273, 9)
+        Me.username_lbl.Location = New System.Drawing.Point(16, 9)
         Me.username_lbl.Name = "username_lbl"
         Me.username_lbl.Size = New System.Drawing.Size(59, 17)
         Me.username_lbl.TabIndex = 404

@@ -109,21 +109,27 @@ Public Class AddUsers
 
     End Sub
     Public Sub namecheck()
-        Dim con As New SqlConnection(cs)
-        con.Open()
-        str = "select count(*)from Users where Username='" & txtUsername.Text & "'"
-        com = New SqlCommand(str, con)
-        Dim count As Integer = Convert.ToInt32(com.ExecuteScalar())
-        con.Close()
-        If count > 0 Then
-            label7.Visible = True
-            label7.Text = "Sorry! you can't take this username"
-            label7.ForeColor = Color.Red
-            'label7.Text = "";
-        Else
-            label7.Text = ""
 
+        If Label14.Text = "Update" Then
+            label7.Visible = False
+        Else
+            Dim con As New SqlConnection(cs)
+            con.Open()
+            str = "select count(*)from Users where Username='" & txtUsername.Text & "'"
+            com = New SqlCommand(str, con)
+            Dim count As Integer = Convert.ToInt32(com.ExecuteScalar())
+            con.Close()
+            If count > 0 Then
+                label7.Visible = True
+                label7.Text = "Sorry! you can't take this username"
+                label7.ForeColor = Color.Red
+                'label7.Text = "";
+            Else
+                label7.Text = ""
+
+            End If
         End If
+
 
     End Sub
 

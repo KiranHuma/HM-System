@@ -50,6 +50,7 @@ Partial Class AddUsers
         Me.label6 = New System.Windows.Forms.Label()
         Me.panel1 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -318,6 +319,7 @@ Partial Class AddUsers
         'panel1
         '
         Me.panel1.BackColor = System.Drawing.Color.White
+        Me.panel1.Controls.Add(Me.Button3)
         Me.panel1.Controls.Add(Me.Label14)
         Me.panel1.Controls.Add(Me.score_txt)
         Me.panel1.Controls.Add(Me.CmboGender)
@@ -352,11 +354,26 @@ Partial Class AddUsers
         'Label14
         '
         Me.Label14.AutoSize = True
+        Me.Label14.ForeColor = System.Drawing.SystemColors.Control
         Me.Label14.Location = New System.Drawing.Point(452, 69)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(32, 17)
         Me.Label14.TabIndex = 29
         Me.Label14.Text = "Edit"
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Indigo
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(206, 524)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(90, 34)
+        Me.Button3.TabIndex = 30
+        Me.Button3.Text = "Login"
+        Me.Button3.UseVisualStyleBackColor = False
+        Me.Button3.Visible = False
         '
         'AddUsers
         '
@@ -404,4 +421,5 @@ Partial Class AddUsers
     Friend WithEvents Label14 As Label
     Friend WithEvents label7 As Label
     Friend WithEvents button2 As Button
+    Friend WithEvents Button3 As Button
 End Class
