@@ -59,6 +59,7 @@ Partial Class frmdashboard
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.username_lbl = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.reservation_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -419,12 +420,22 @@ Partial Class frmdashboard
         Me.Button1.TabIndex = 0
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'username_lbl
+        '
+        Me.username_lbl.AutoSize = True
+        Me.username_lbl.Location = New System.Drawing.Point(1273, 9)
+        Me.username_lbl.Name = "username_lbl"
+        Me.username_lbl.Size = New System.Drawing.Size(59, 17)
+        Me.username_lbl.TabIndex = 404
+        Me.username_lbl.Text = "Label17"
+        '
         'frmdashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1363, 848)
+        Me.Controls.Add(Me.username_lbl)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label16)
@@ -484,4 +495,5 @@ Partial Class frmdashboard
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents Label6 As Label
+    Friend WithEvents username_lbl As Label
 End Class

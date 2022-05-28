@@ -16,7 +16,7 @@ Public Class frmdashboard
     Dim con As New SqlConnection
     Dim cmd As New SqlCommand
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=DESKTOP-H2H8TNI;Initial Catalog=db_hmsystem;Integrated Security=True"
+    Dim cs As String = "Data Source=ANIRUDH;Initial Catalog=db_hmsystem;Integrated Security=True"
     'Database Connection
     Private Sub dbaccessconnection()
         Try

@@ -16,7 +16,7 @@ Public Class frmroomsData
     Dim con As New SqlClient.SqlConnection
     Dim cmd As New SqlClient.SqlCommand
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=DESKTOP-H2H8TNI;Initial Catalog=db_hmsystem;Integrated Security=True"
+    Dim cs As String = "Data Source=ANIRUDH;Initial Catalog=db_hmsystem;Integrated Security=True"
     'Database Connection
     Private Sub dbaccessconnection()
         Try
@@ -561,5 +561,9 @@ Public Class frmroomsData
         update_reserve_status()
         getdata_reserve()
         getdata_roomsdetails()
+    End Sub
+
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+
     End Sub
 End Class

@@ -1,12 +1,7 @@
 ﻿
 Imports System.Data.SqlClient   'FOR SQL CONNECTION AND COMMAND.
 Public Class FrmServices
-    Private bitmap As Bitmap 'for print grid
-    Dim rdr As SqlDataReader
-    Dim provider As String
-    Dim dataFile As String
-    Dim connString As String
-    Dim myConnection As SqlConnection = New SqlConnection
+
     Dim ds As DataSet = New DataSet
     Dim da As SqlDataAdapter
     Dim tables As DataTableCollection = ds.Tables

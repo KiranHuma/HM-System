@@ -23,7 +23,6 @@ Partial Class frmroomsData
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmroomsData))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -49,9 +48,9 @@ Partial Class frmroomsData
         Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmroomsData))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.closee = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnupdate = New System.Windows.Forms.Button()
@@ -108,6 +107,7 @@ Partial Class frmroomsData
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.closee = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.roomreg_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -162,20 +162,6 @@ Partial Class frmroomsData
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Rooms Registration"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'closee
-        '
-        Me.closee.BackColor = System.Drawing.Color.Transparent
-        Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
-        Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.closee.ForeColor = System.Drawing.SystemColors.Control
-        Me.closee.Location = New System.Drawing.Point(1296, 4)
-        Me.closee.Margin = New System.Windows.Forms.Padding(4)
-        Me.closee.Name = "closee"
-        Me.closee.Size = New System.Drawing.Size(34, 33)
-        Me.closee.TabIndex = 393
-        Me.closee.UseVisualStyleBackColor = False
         '
         'Label6
         '
@@ -976,6 +962,20 @@ Partial Class frmroomsData
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1288, 590)
         Me.DataGridView1.TabIndex = 187
+        '
+        'closee
+        '
+        Me.closee.BackColor = System.Drawing.Color.Transparent
+        Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
+        Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.closee.ForeColor = System.Drawing.SystemColors.Control
+        Me.closee.Location = New System.Drawing.Point(1296, 4)
+        Me.closee.Margin = New System.Windows.Forms.Padding(4)
+        Me.closee.Name = "closee"
+        Me.closee.Size = New System.Drawing.Size(34, 33)
+        Me.closee.TabIndex = 393
+        Me.closee.UseVisualStyleBackColor = False
         '
         'frmroomsData
         '

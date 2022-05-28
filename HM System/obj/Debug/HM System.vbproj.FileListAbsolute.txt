@@ -30,3 +30,5 @@ D:\Vb projects\HM System\HM System\obj\Debug\HM System.vbproj.CoreCompileInputs.
 D:\Vb projects\HM System\HM System\obj\Debug\HM System.exe
 D:\Vb projects\HM System\HM System\obj\Debug\HM System.xml
 D:\Vb projects\HM System\HM System\obj\Debug\HM System.pdb
+D:\Vb projects\HM System\HM System\obj\Debug\HM_System.AddUsers.resources
+D:\Vb projects\HM System\HM System\obj\Debug\HM_System.AdminPanel.resources

@@ -18,7 +18,7 @@ Public Class Frmlogin
     Dim con As New SqlClient.SqlConnection
     Dim cmd As New SqlClient.SqlCommand
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=DESKTOP-H2H8TNI;Initial Catalog=db_hmsystem;Integrated Security=True"
+    Dim cs As String = "Data Source=ANIRUDH;Initial Catalog=db_hmsystem;Integrated Security=True"
     'Database Connection
     Private Sub dbaccessconnection()
         Try
@@ -29,33 +29,45 @@ Public Class Frmlogin
             Me.Dispose()
         End Try
     End Sub
-    'check the username and password
+    Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
+        If selectUser.Text = "User" Then
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If TextBox1.Text.Length <= 0 Then
-            MessageBox.Show("Please enter Username!")
-        ElseIf TextBox2.Text.Length <= 0 Then
-            MessageBox.Show("Please enter Password!")
-        End If
-        If TextBox1.Text = "hotelmanage " Or TextBox2.Text = "hotel123" Then
-            Beep()
-            Beep()
-            frmdashboard.ShowDialog()
-            Me.Dispose()
+            Dim con As New SqlConnection(cs) ' making connection
+            Dim sda As New SqlDataAdapter("SELECT COUNT(*) FROM Users WHERE Username='" & txtUsername.Text & "' AND Password='" & txtPass.Text & "'", con)
+            ' in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. 
+            Dim dt As New DataTable() 'this is creating a virtual table
+            sda.Fill(dt)
+            If dt.Rows(0)(0).ToString() = "1" Then
+                'Me.Close()
+
+                frmdashboard.username_lbl.Text = Me.txtUsername.Text
+                frmdashboard.Show()
+                Me.Close()
+            Else
+                MessageBox.Show("Invalid username or password")
+            End If
+        ElseIf selectUser.Text = "Admin" Then
+            Dim con As New SqlConnection(cs) ' making connection
+            Dim sda As New SqlDataAdapter("SELECT COUNT(*) FROM db_admin WHERE Username='" & txtUsername.Text & "' AND Password='" & txtPass.Text & "'", con)
+            ' in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. 
+            Dim dt As New DataTable() 'this is creating a virtual table
+            sda.Fill(dt)
+            If dt.Rows(0)(0).ToString() = "1" Then
+
+
+                AdminPanel.Show()
+                Me.Close()
+            Else
+                MessageBox.Show("Your username Or password is not match", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                label6.ForeColor = Color.Red
+                label6.Text = " Not succsessfully login "
+            End If
         Else
-            Label4.Visible = True
-            Label4.ForeColor = System.Drawing.Color.Red
-            Label4.Text = " Not succsessfully login "
+            MessageBox.Show("Select your choice", "ADMIN or USER", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
-        'End If
     End Sub
-    'this enable the password to be written in asterik
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked Then
-            TextBox2.PasswordChar = ControlChars.NullChar
-            ' TextBox2.PasswordChar = ""
-        Else
-            TextBox2.PasswordChar = "*"
-        End If
+
+    Private Sub Frmlogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
