@@ -49,8 +49,10 @@ Partial Class AddUsers
         Me.label5 = New System.Windows.Forms.Label()
         Me.label6 = New System.Windows.Forms.Label()
         Me.panel1 = New System.Windows.Forms.Panel()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -81,7 +83,7 @@ Partial Class AddUsers
         'CmboGender
         '
         Me.CmboGender.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CmboGender.Location = New System.Drawing.Point(206, 379)
+        Me.CmboGender.Location = New System.Drawing.Point(206, 403)
         Me.CmboGender.Name = "CmboGender"
         Me.CmboGender.Size = New System.Drawing.Size(218, 23)
         Me.CmboGender.TabIndex = 27
@@ -148,7 +150,7 @@ Partial Class AddUsers
         'txtUsername
         '
         Me.txtUsername.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(206, 219)
+        Me.txtUsername.Location = New System.Drawing.Point(206, 243)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(218, 23)
         Me.txtUsername.TabIndex = 0
@@ -157,7 +159,7 @@ Partial Class AddUsers
         '
         Me.label7.AutoSize = True
         Me.label7.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label7.Location = New System.Drawing.Point(65, 504)
+        Me.label7.Location = New System.Drawing.Point(65, 528)
         Me.label7.Name = "label7"
         Me.label7.Size = New System.Drawing.Size(44, 18)
         Me.label7.TabIndex = 21
@@ -167,7 +169,7 @@ Partial Class AddUsers
         'txtName
         '
         Me.txtName.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.Location = New System.Drawing.Point(206, 258)
+        Me.txtName.Location = New System.Drawing.Point(206, 282)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(218, 23)
         Me.txtName.TabIndex = 1
@@ -175,7 +177,7 @@ Partial Class AddUsers
         'txtPass
         '
         Me.txtPass.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(206, 297)
+        Me.txtPass.Location = New System.Drawing.Point(206, 321)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(218, 23)
         Me.txtPass.TabIndex = 2
@@ -183,7 +185,7 @@ Partial Class AddUsers
         'txtEmail
         '
         Me.txtEmail.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(206, 456)
+        Me.txtEmail.Location = New System.Drawing.Point(206, 480)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(218, 23)
         Me.txtEmail.TabIndex = 4
@@ -194,7 +196,7 @@ Partial Class AddUsers
         Me.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.button2.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.button2.ForeColor = System.Drawing.Color.White
-        Me.button2.Location = New System.Drawing.Point(206, 524)
+        Me.button2.Location = New System.Drawing.Point(206, 548)
         Me.button2.Name = "button2"
         Me.button2.Size = New System.Drawing.Size(90, 34)
         Me.button2.TabIndex = 17
@@ -204,7 +206,7 @@ Partial Class AddUsers
         'txtPassAgain
         '
         Me.txtPassAgain.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassAgain.Location = New System.Drawing.Point(206, 336)
+        Me.txtPassAgain.Location = New System.Drawing.Point(206, 360)
         Me.txtPassAgain.Name = "txtPassAgain"
         Me.txtPassAgain.Size = New System.Drawing.Size(218, 23)
         Me.txtPassAgain.TabIndex = 5
@@ -214,7 +216,7 @@ Partial Class AddUsers
         Me.label9.AutoSize = True
         Me.label9.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.label9.ForeColor = System.Drawing.Color.Black
-        Me.label9.Location = New System.Drawing.Point(65, 420)
+        Me.label9.Location = New System.Drawing.Point(65, 444)
         Me.label9.Name = "label9"
         Me.label9.Size = New System.Drawing.Size(91, 20)
         Me.label9.TabIndex = 16
@@ -225,7 +227,7 @@ Partial Class AddUsers
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.label1.ForeColor = System.Drawing.Color.Black
-        Me.label1.Location = New System.Drawing.Point(65, 220)
+        Me.label1.Location = New System.Drawing.Point(65, 244)
         Me.label1.Name = "label1"
         Me.label1.Size = New System.Drawing.Size(80, 20)
         Me.label1.TabIndex = 6
@@ -234,7 +236,7 @@ Partial Class AddUsers
         'txtContact
         '
         Me.txtContact.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContact.Location = New System.Drawing.Point(206, 417)
+        Me.txtContact.Location = New System.Drawing.Point(206, 441)
         Me.txtContact.Name = "txtContact"
         Me.txtContact.Size = New System.Drawing.Size(218, 23)
         Me.txtContact.TabIndex = 15
@@ -244,7 +246,7 @@ Partial Class AddUsers
         Me.label2.AutoSize = True
         Me.label2.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.label2.ForeColor = System.Drawing.Color.Black
-        Me.label2.Location = New System.Drawing.Point(65, 260)
+        Me.label2.Location = New System.Drawing.Point(65, 284)
         Me.label2.Name = "label2"
         Me.label2.Size = New System.Drawing.Size(49, 20)
         Me.label2.TabIndex = 7
@@ -254,7 +256,7 @@ Partial Class AddUsers
         '
         Me.label8.AutoSize = True
         Me.label8.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label8.Location = New System.Drawing.Point(430, 337)
+        Me.label8.Location = New System.Drawing.Point(430, 361)
         Me.label8.Name = "label8"
         Me.label8.Size = New System.Drawing.Size(44, 18)
         Me.label8.TabIndex = 14
@@ -266,7 +268,7 @@ Partial Class AddUsers
         Me.label3.AutoSize = True
         Me.label3.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.label3.ForeColor = System.Drawing.Color.Black
-        Me.label3.Location = New System.Drawing.Point(65, 300)
+        Me.label3.Location = New System.Drawing.Point(65, 324)
         Me.label3.Name = "label3"
         Me.label3.Size = New System.Drawing.Size(72, 20)
         Me.label3.TabIndex = 8
@@ -275,7 +277,7 @@ Partial Class AddUsers
         'button1
         '
         Me.button1.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button1.Location = New System.Drawing.Point(322, 524)
+        Me.button1.Location = New System.Drawing.Point(322, 548)
         Me.button1.Name = "button1"
         Me.button1.Size = New System.Drawing.Size(102, 34)
         Me.button1.TabIndex = 13
@@ -288,7 +290,7 @@ Partial Class AddUsers
         Me.label4.AutoSize = True
         Me.label4.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.label4.ForeColor = System.Drawing.Color.Black
-        Me.label4.Location = New System.Drawing.Point(65, 340)
+        Me.label4.Location = New System.Drawing.Point(65, 364)
         Me.label4.Name = "label4"
         Me.label4.Size = New System.Drawing.Size(115, 20)
         Me.label4.TabIndex = 9
@@ -299,7 +301,7 @@ Partial Class AddUsers
         Me.label5.AutoSize = True
         Me.label5.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.label5.ForeColor = System.Drawing.Color.Black
-        Me.label5.Location = New System.Drawing.Point(65, 380)
+        Me.label5.Location = New System.Drawing.Point(65, 404)
         Me.label5.Name = "label5"
         Me.label5.Size = New System.Drawing.Size(61, 20)
         Me.label5.TabIndex = 10
@@ -310,7 +312,7 @@ Partial Class AddUsers
         Me.label6.AutoSize = True
         Me.label6.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.label6.ForeColor = System.Drawing.Color.Black
-        Me.label6.Location = New System.Drawing.Point(65, 460)
+        Me.label6.Location = New System.Drawing.Point(65, 484)
         Me.label6.Name = "label6"
         Me.label6.Size = New System.Drawing.Size(47, 20)
         Me.label6.TabIndex = 11
@@ -319,6 +321,8 @@ Partial Class AddUsers
         'panel1
         '
         Me.panel1.BackColor = System.Drawing.Color.White
+        Me.panel1.Controls.Add(Me.ComboBox1)
+        Me.panel1.Controls.Add(Me.Label15)
         Me.panel1.Controls.Add(Me.Button3)
         Me.panel1.Controls.Add(Me.Label14)
         Me.panel1.Controls.Add(Me.score_txt)
@@ -348,8 +352,42 @@ Partial Class AddUsers
         Me.panel1.Controls.Add(Me.label6)
         Me.panel1.Location = New System.Drawing.Point(118, 32)
         Me.panel1.Name = "panel1"
-        Me.panel1.Size = New System.Drawing.Size(582, 588)
+        Me.panel1.Size = New System.Drawing.Size(582, 598)
         Me.panel1.TabIndex = 26
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"admin", "user"})
+        Me.ComboBox1.Location = New System.Drawing.Point(206, 213)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(218, 24)
+        Me.ComboBox1.TabIndex = 33
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label15.ForeColor = System.Drawing.Color.Black
+        Me.Label15.Location = New System.Drawing.Point(65, 209)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(39, 20)
+        Me.Label15.TabIndex = 32
+        Me.Label15.Text = "Role"
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Indigo
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(206, 548)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(90, 34)
+        Me.Button3.TabIndex = 30
+        Me.Button3.Text = "Login"
+        Me.Button3.UseVisualStyleBackColor = False
+        Me.Button3.Visible = False
         '
         'Label14
         '
@@ -360,20 +398,6 @@ Partial Class AddUsers
         Me.Label14.Size = New System.Drawing.Size(32, 17)
         Me.Label14.TabIndex = 29
         Me.Label14.Text = "Edit"
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Indigo
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(206, 524)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(90, 34)
-        Me.Button3.TabIndex = 30
-        Me.Button3.Text = "Login"
-        Me.Button3.UseVisualStyleBackColor = False
-        Me.Button3.Visible = False
         '
         'AddUsers
         '
@@ -422,4 +446,6 @@ Partial Class AddUsers
     Friend WithEvents label7 As Label
     Friend WithEvents button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Private WithEvents Label15 As Label
 End Class

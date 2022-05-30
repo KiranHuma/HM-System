@@ -33,7 +33,7 @@ Public Class Frmlogin
         If selectUser.Text = "User" Then
 
             Dim con As New SqlConnection(cs) ' making connection
-            Dim sda As New SqlDataAdapter("SELECT COUNT(*) FROM Users WHERE Username='" & txtUsername.Text & "' AND Password='" & txtPass.Text & "'", con)
+            Dim sda As New SqlDataAdapter("SELECT COUNT(*) FROM Users WHERE Username='" & txtUsername.Text & "' AND Password='" & txtPass.Text & "' AND UserRole='user'", con)
             ' in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. 
             Dim dt As New DataTable() 'this is creating a virtual table
             sda.Fill(dt)
@@ -48,7 +48,7 @@ Public Class Frmlogin
             End If
         ElseIf selectUser.Text = "Admin" Then
             Dim con As New SqlConnection(cs) ' making connection
-            Dim sda As New SqlDataAdapter("SELECT COUNT(*) FROM db_admin WHERE Username='" & txtUsername.Text & "' AND Password='" & txtPass.Text & "'", con)
+            Dim sda As New SqlDataAdapter("SELECT COUNT(*) FROM Users WHERE Username='" & txtUsername.Text & "' AND UserRole='admin'", con)
             ' in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. 
             Dim dt As New DataTable() 'this is creating a virtual table
             sda.Fill(dt)

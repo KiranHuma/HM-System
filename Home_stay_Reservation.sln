@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1267
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HM System", "HM System\HM System.vbproj", "{CA438F29-C26E-4808-8CFB-020753B7EF89}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Home_stay_Reservation", "HM System\Home_stay_Reservation.vbproj", "{CA438F29-C26E-4808-8CFB-020753B7EF89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

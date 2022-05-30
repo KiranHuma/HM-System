@@ -43,7 +43,7 @@ Public Class AdminPanel
         Try
             Dim con As New SqlConnection(cs)
             con.Open()
-            Dim da As New SqlDataAdapter("Select U_ID,Username,Name,Password,Gender,Contact_no,Email from Users ", con)
+            Dim da As New SqlDataAdapter("Select U_ID,UserRole,Username,Name,Password,Gender,Contact_no,Email from Users ", con)
             Dim dt As New DataTable
             da.Fill(dt)
             source2.DataSource = dt

@@ -54,6 +54,7 @@ Public Class AddUsers
             Do While read.Read()
                 ' TextBox4.Text = (read("AssetID").ToString())
                 txtUsername.Text = (read("Username").ToString())
+                ComboBox1.Text = (read("UserRole").ToString())
                 txtName.Text = (read("Name").ToString())
                 txtPass.Text = (read("Password").ToString())
                 CmboGender.Text = (read("Gender").ToString())
@@ -77,8 +78,8 @@ Public Class AddUsers
         Try
             dbaccessconnection()
             con.Open()
-            cmd.CommandText = "INSERT INTO Users (U_ID,Username,Name,Password,Gender,Contact_no,Email)values
-                                                 ('" & Uid_txt.Text & "','" & txtUsername.Text & "','" & txtName.Text & "','" & txtPass.Text & "','" & CmboGender.Text & "','" & txtContact.Text & "','" & txtEmail.Text & "')"
+            cmd.CommandText = "INSERT INTO Users (U_ID,UserRole,Username,Name,Password,Gender,Contact_no,Email)values
+                                                 ('" & Uid_txt.Text & "','" & ComboBox1.Text & "','" & txtUsername.Text & "','" & txtName.Text & "','" & txtPass.Text & "','" & CmboGender.Text & "','" & txtContact.Text & "','" & txtEmail.Text & "')"
             cmd.ExecuteNonQuery()
             con.Close()
             ' getdata()
@@ -94,7 +95,7 @@ Public Class AddUsers
 
                 dbaccessconnection()
                 con.Open()
-                cmd.CommandText = "Update Users set Username='" & txtUsername.Text & "', Name='" & txtName.Text & "', Password='" & txtPass.Text & "',Gender= '" & CmboGender.Text & "',Contact_no= '" & txtContact.Text & "',Email= '" & txtEmail.Text & "'  where U_ID='" & Uid_txt.Text & "'"
+                cmd.CommandText = "Update Users set UserRole='" & ComboBox1.Text & "',Username='" & txtUsername.Text & "', Name='" & txtName.Text & "', Password='" & txtPass.Text & "',Gender= '" & CmboGender.Text & "',Contact_no= '" & txtContact.Text & "',Email= '" & txtEmail.Text & "'  where U_ID='" & Uid_txt.Text & "'"
 
                 cmd.ExecuteNonQuery()
                 con.Close()
@@ -176,5 +177,10 @@ Public Class AddUsers
 
     Private Sub button1_Click(sender As Object, e As EventArgs) Handles button1.Click
         update2()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Frmlogin.ShowDialog()
+        Me.Close()
     End Sub
 End Class
