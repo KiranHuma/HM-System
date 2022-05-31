@@ -1,0 +1,5 @@
+default user login details
+
+user1:12345
+default admin login details
+admin1:1234

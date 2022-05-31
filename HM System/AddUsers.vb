@@ -24,7 +24,7 @@ Public Class AddUsers
     Dim source2 As New BindingSource()
 
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=ANIRUDH;Initial Catalog=db_hmsystem;Integrated Security=true"
+    Dim cs As String = "Data Source=MITTA-MISHAL;Initial Catalog=db_hmsystem;Integrated Security=true"
     Private Sub dbaccessconnection()
         Try
             con.ConnectionString = cs
