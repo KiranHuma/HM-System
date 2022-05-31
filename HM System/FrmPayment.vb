@@ -17,7 +17,7 @@ Public Class FrmPayment
     Dim con As New SqlConnection
     Dim cmd As New SqlCommand
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=MITTA-MISHAL;Initial Catalog=db_hmsystem;Integrated Security=True"
+    Dim cs As String = "Data Source=ANIRUDH;Initial Catalog=db_hmsystem;Integrated Security=True"
     'Database Connection
     Private Sub dbaccessconnection()
         Try
