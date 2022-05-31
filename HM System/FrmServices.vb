@@ -31,6 +31,7 @@ Public Class FrmServices
             welcomemsg.Text = "'Service" & service_txt.Text & "' saved successfully!"
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
             con.Close()
+            MsgBox("Data Save succesfully")
             getdata()
         Catch ex As Exception
             MsgBox("Data Inserted Failed because " & ex.Message)
@@ -229,5 +230,10 @@ Public Class FrmServices
     End Sub
     Private Sub closee_Click(sender As Object, e As EventArgs) Handles closee.Click
         Me.Dispose()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        frmdashboard.Show()
+        Me.Close()
     End Sub
 End Class

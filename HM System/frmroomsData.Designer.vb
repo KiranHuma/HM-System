@@ -44,13 +44,9 @@ Partial Class frmroomsData
         Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.closee = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -101,8 +97,6 @@ Partial Class frmroomsData
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.reservedgrid = New System.Windows.Forms.DataGridView()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.cancell_Grid = New System.Windows.Forms.DataGridView()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -115,8 +109,6 @@ Partial Class frmroomsData
         CType(Me.reservation_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.reservedgrid, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage4.SuspendLayout()
-        CType(Me.cancell_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage5.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -127,7 +119,6 @@ Partial Class frmroomsData
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
@@ -138,6 +129,8 @@ Partial Class frmroomsData
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.closee)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.Label5)
@@ -161,7 +154,18 @@ Partial Class frmroomsData
         Me.TabPage1.Size = New System.Drawing.Size(1337, 769)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Rooms Registration"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.Transparent
+        Me.Button2.Image = Global.HM_System.My.Resources.Resources.back_641px
+        Me.Button2.Location = New System.Drawing.Point(26, 16)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(42, 43)
+        Me.Button2.TabIndex = 401
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'closee
         '
@@ -169,7 +173,7 @@ Partial Class frmroomsData
         Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
         Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.closee.ForeColor = System.Drawing.SystemColors.Control
+        Me.closee.ForeColor = System.Drawing.Color.Transparent
         Me.closee.Location = New System.Drawing.Point(1296, 4)
         Me.closee.Margin = New System.Windows.Forms.Padding(4)
         Me.closee.Name = "closee"
@@ -384,6 +388,7 @@ Partial Class frmroomsData
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.White
         Me.TabPage2.Controls.Add(Me.Label19)
         Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.Label18)
@@ -419,7 +424,6 @@ Partial Class frmroomsData
         Me.TabPage2.Size = New System.Drawing.Size(1337, 769)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Room Reservation"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Label19
         '
@@ -443,15 +447,16 @@ Partial Class frmroomsData
         Me.Button1.TabIndex = 188
         Me.Button1.Text = "Cancel"
         Me.Button1.UseVisualStyleBackColor = False
+        Me.Button1.Visible = False
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(633, 92)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(113, 17)
+        Me.Label18.Size = New System.Drawing.Size(156, 17)
         Me.Label18.TabIndex = 187
-        Me.Label18.Text = "Available Rooms"
+        Me.Label18.Text = "Select Available Rooms"
         '
         'status_lbl
         '
@@ -465,6 +470,7 @@ Partial Class frmroomsData
         '
         'customerRnumber_txt
         '
+        Me.customerRnumber_txt.Enabled = False
         Me.customerRnumber_txt.Location = New System.Drawing.Point(222, 205)
         Me.customerRnumber_txt.Name = "customerRnumber_txt"
         Me.customerRnumber_txt.Size = New System.Drawing.Size(220, 22)
@@ -547,6 +553,7 @@ Partial Class frmroomsData
         '
         'price_txt
         '
+        Me.price_txt.Enabled = False
         Me.price_txt.Location = New System.Drawing.Point(222, 476)
         Me.price_txt.Name = "price_txt"
         Me.price_txt.Size = New System.Drawing.Size(220, 22)
@@ -665,6 +672,7 @@ Partial Class frmroomsData
         '
         're_roomtype_txt
         '
+        Me.re_roomtype_txt.Enabled = False
         Me.re_roomtype_txt.FormattingEnabled = True
         Me.re_roomtype_txt.Items.AddRange(New Object() {"VIP", "Single Bed", "Double Bed"})
         Me.re_roomtype_txt.Location = New System.Drawing.Point(222, 233)
@@ -681,6 +689,7 @@ Partial Class frmroomsData
         '
         'entry_txt
         '
+        Me.entry_txt.Enabled = False
         Me.entry_txt.Location = New System.Drawing.Point(222, 149)
         Me.entry_txt.Name = "entry_txt"
         Me.entry_txt.Size = New System.Drawing.Size(220, 22)
@@ -740,6 +749,7 @@ Partial Class frmroomsData
         '
         'TabPage3
         '
+        Me.TabPage3.BackColor = System.Drawing.Color.White
         Me.TabPage3.Controls.Add(Me.Button6)
         Me.TabPage3.Controls.Add(Me.reservedgrid)
         Me.TabPage3.Location = New System.Drawing.Point(4, 28)
@@ -748,7 +758,6 @@ Partial Class frmroomsData
         Me.TabPage3.Size = New System.Drawing.Size(1337, 769)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Reserved Rooms"
-        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'Button6
         '
@@ -821,77 +830,9 @@ Partial Class frmroomsData
         Me.reservedgrid.Size = New System.Drawing.Size(1288, 562)
         Me.reservedgrid.TabIndex = 184
         '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.cancell_Grid)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 28)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1337, 769)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Cancelled Reservations"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'cancell_Grid
-        '
-        Me.cancell_Grid.AllowUserToAddRows = False
-        Me.cancell_Grid.AllowUserToDeleteRows = False
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White
-        Me.cancell_Grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
-        Me.cancell_Grid.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cancell_Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.cancell_Grid.BackgroundColor = System.Drawing.Color.RoyalBlue
-        Me.cancell_Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.cancell_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.cancell_Grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
-        Me.cancell_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.cancell_Grid.DefaultCellStyle = DataGridViewCellStyle18
-        Me.cancell_Grid.EnableHeadersVisualStyles = False
-        Me.cancell_Grid.GridColor = System.Drawing.Color.RoyalBlue
-        Me.cancell_Grid.Location = New System.Drawing.Point(19, 37)
-        Me.cancell_Grid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.cancell_Grid.Name = "cancell_Grid"
-        Me.cancell_Grid.ReadOnly = True
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle19.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle19.ForeColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.cancell_Grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
-        Me.cancell_Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle20.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White
-        Me.cancell_Grid.RowsDefaultCellStyle = DataGridViewCellStyle20
-        Me.cancell_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.cancell_Grid.Size = New System.Drawing.Size(1288, 650)
-        Me.cancell_Grid.TabIndex = 185
-        '
         'TabPage5
         '
+        Me.TabPage5.BackColor = System.Drawing.Color.White
         Me.TabPage5.Controls.Add(Me.Label21)
         Me.TabPage5.Controls.Add(Me.TextBox3)
         Me.TabPage5.Controls.Add(Me.DataGridView1)
@@ -901,7 +842,6 @@ Partial Class frmroomsData
         Me.TabPage5.Size = New System.Drawing.Size(1337, 769)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Search"
-        Me.TabPage5.UseVisualStyleBackColor = True
         '
         'Label21
         '
@@ -923,56 +863,56 @@ Partial Class frmroomsData
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
         Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.RoyalBlue
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle22.BackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle23.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle18
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.GridColor = System.Drawing.Color.RoyalBlue
         Me.DataGridView1.Location = New System.Drawing.Point(24, 135)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle24.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle25.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle20
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1288, 590)
         Me.DataGridView1.TabIndex = 187
@@ -997,8 +937,6 @@ Partial Class frmroomsData
         CType(Me.reservation_Grid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         CType(Me.reservedgrid, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage4.ResumeLayout(False)
-        CType(Me.cancell_Grid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1057,12 +995,11 @@ Partial Class frmroomsData
     Friend WithEvents re_roomtype_txt As ComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button6 As Button
-    Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents cancell_Grid As DataGridView
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents Label21 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label19 As Label
     Friend WithEvents closee As Button
+    Friend WithEvents Button2 As Button
 End Class

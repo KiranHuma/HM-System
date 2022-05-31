@@ -100,7 +100,7 @@ Public Class AdminPanel
         AddUsers.button1.Visible = True
         AddUsers.label7.Visible = False
         AddUsers.button2.Visible = False
-        AddUsers.Button3.Visible = True
+
         AddUsers.ShowDialog()
         Me.Close()
     End Sub

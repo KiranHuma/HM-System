@@ -37,10 +37,13 @@ Public Class frmroomsData
             welcomemsg.Text = "'Room" & roomnum_txt.Text & "' saved successfully!"
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
             con.Close()
+
             getdata()
         Catch ex As Exception
-            MsgBox("Data Inserted Failed because " & ex.Message)
-            Me.Dispose()
+            MsgBox("Room is already registered")
+
+            Call (New frmroomsData()).ShowDialog()
+            Me.Close()
         End Try
     End Sub
     'this function will autoincrement the rommnumber
@@ -192,19 +195,22 @@ Public Class frmroomsData
 
     '' The function of tab2 of reservation are below
     Private Sub insert_reserve()
+
         Try
-            dbaccessconnection()
-            con.Open()
-            cmd.CommandText = "insert into db_reservation(EntryNumber,Customer_Name,Room_Number,Room_Type,Number_of_Customers,Check_In_Date,Address,Phone_Number,Price,Reservation_Status)values('" & entry_txt.Text & "','" & customer_txt.Text & "','" & customerRnumber_txt.Text & "','" & re_roomtype_txt.Text & "','" & re_customer_txt.Text & "','" & re_checkin_dte.Value & "','" & re_address_txt.Text & "','" & phonenumber_txt.Text & "','" & price_txt.Text & "','" & status_lbl.Text & "')"
-            cmd.ExecuteNonQuery()
-            welcomemsg.Text = "'" & customer_txt.Text & "' saved successfully!"
-            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
-            con.Close()
-            'getdata_reserve()
-        Catch ex As Exception
-            MsgBox("Data Inserted Failed because " & ex.Message)
-            Me.Dispose()
-        End Try
+                dbaccessconnection()
+                con.Open()
+                cmd.CommandText = "insert into db_reservation(EntryNumber,Customer_Name,Room_Number,Room_Type,Number_of_Customers,Check_In_Date,Address,Phone_Number,Price,Reservation_Status)values('" & entry_txt.Text & "','" & customer_txt.Text & "','" & customerRnumber_txt.Text & "','" & re_roomtype_txt.Text & "','" & re_customer_txt.Text & "','" & re_checkin_dte.Value & "','" & re_address_txt.Text & "','" & phonenumber_txt.Text & "','" & price_txt.Text & "','" & status_lbl.Text & "')"
+                cmd.ExecuteNonQuery()
+                welcomemsg.Text = "'" & customer_txt.Text & "' saved successfully!"
+                welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
+                con.Close()
+                'getdata_reserve()
+            Catch ex As Exception
+                MsgBox("Data Inserted Failed because " & ex.Message)
+                Me.Dispose()
+            End Try
+
+
     End Sub
     'change the status of available to reserved
     Private Sub update_reserve_status()
@@ -248,7 +254,19 @@ Public Class frmroomsData
             MessageBox.Show("Data Not Updated" & ex.Message)
         End Try
     End Sub
-
+    Private Sub delete_Cancellreserved_status()
+        con.Close()
+        Try
+            dbaccessconnection()
+            con.Open()
+            cmd.CommandText = ("UPDATE db_reservation SET Reservation_Status= 'Available'  where EntryNumber=" & entry_txt.Text & "")
+            cmd.ExecuteNonQuery()
+            ' MessageBox.Show("Status Updated")
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show("Data Not Updated" & ex.Message)
+        End Try
+    End Sub
     'autoincrement of entry number of reservation
     Private Sub txtboxid_reserve()
         Try
@@ -324,6 +342,7 @@ Public Class frmroomsData
             btnsave.Enabled = False
             btndel.Enabled = True
             btnupdate.Enabled = True
+
             Me.customerRnumber_txt.Text = reservation_Grid.CurrentRow.Cells(0).Value.ToString
             Me.re_roomtype_txt.Text = reservation_Grid.CurrentRow.Cells(1).Value.ToString
             Me.price_txt.Text = reservation_Grid.CurrentRow.Cells(2).Value.ToString
@@ -359,21 +378,23 @@ Public Class frmroomsData
         End Try
     End Sub
     'get the data of cancelled reservation
-    Private Sub getdata_cancellroomsdetails()
-        Try
-            Dim con As New SqlConnection(cs)
-            con.Open()
-            Dim da As New SqlDataAdapter("Select * from db_reservation where  Reservation_Status='Cancell'", con)
-            Dim dt As New DataTable
-            da.Fill(dt)
-            source2.DataSource = dt
-            cancell_Grid.DataSource = dt
-            cancell_Grid.Refresh()
-        Catch ex As Exception
-            MessageBox.Show("Failed:Retrieving Data" & ex.Message)
-            Me.Dispose()
-        End Try
-    End Sub
+    '  Private Sub getdata_cancellroomsdetails()
+    'Try
+    'Dim con As New SqlConnection(cs)
+    '    con.Open()
+    '    Dim da As New SqlDataAdapter("Select * from db_reservation where  Reservation_Status='Cancell'", con)
+    't As New DataTable
+    '   da.Fill(dt)
+    '   source2.DataSource = dt
+    '   cancell_Grid.DataSource = dt
+    '   cancell_Grid.Refresh()
+    'Catch ex As Exception
+    '    MessageBox.Show("Failed:Retrieving Data" & ex.Message)
+    '     Me.Dispose()
+    'End Try
+    ' End Sub
+
+
     'add new record
     Private Sub addnew_reservation()
         txtboxid_reserve()
@@ -393,25 +414,7 @@ Public Class frmroomsData
     End Sub
     'populate the data from grid to textboxes
     Private Sub reservedgrid_MouseClick(sender As Object, e As MouseEventArgs) Handles reservedgrid.MouseClick
-        Try
-            TabControl1.SelectedTab = TabPage2
-            btnupdate_rserv.Enabled = True
-            btndelete_rserve.Enabled = True
-            Me.entry_txt.Text = reservedgrid.CurrentRow.Cells(0).Value.ToString
-            Me.customer_txt.Text = reservedgrid.CurrentRow.Cells(1).Value.ToString
-            Me.customerRnumber_txt.Text = reservedgrid.CurrentRow.Cells(2).Value.ToString
-            Me.re_roomtype_txt.Text = reservedgrid.CurrentRow.Cells(3).Value.ToString
-            Me.re_customer_txt.Text = reservedgrid.CurrentRow.Cells(4).Value.ToString
-            Me.re_checkin_dte.Value = reservedgrid.CurrentRow.Cells(5).Value.ToString
-            Me.re_address_txt.Text = reservedgrid.CurrentRow.Cells(6).Value.ToString
-            Me.phonenumber_txt.Text = reservedgrid.CurrentRow.Cells(7).Value.ToString
-            Me.price_txt.Text = reservedgrid.CurrentRow.Cells(8).Value.ToString
 
-
-        Catch ex As Exception
-            MessageBox.Show("Failed:Selected Value of Cellcontent", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            Me.Dispose()
-        End Try
     End Sub
     'Delete function
     Private Sub DeleteSelecedRows_reserve()
@@ -451,13 +454,11 @@ Public Class frmroomsData
         update_Cancellreserved_status()
         getdata_reserve()
         getdata_roomsdetails()
-        getdata_cancellroomsdetails()
+        'getdata_cancellroomsdetails()
     End Sub
-    Private Sub cancel_btn()
 
-    End Sub
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-
+        update_Cancell_status()
         DeleteSelecedRows_reserve()
     End Sub
     'rservation data in grid
@@ -529,7 +530,7 @@ Public Class frmroomsData
         txtboxid_reserve()
         getdata_reserve()
         getdata_roomsdetails()
-        getdata_cancellroomsdetails()
+        'getdata_cancellroomsdetails()
     End Sub
     'funtion of insert called on btnsave
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
@@ -539,6 +540,7 @@ Public Class frmroomsData
     End Sub
     Private Sub btnadd_Click(sender As Object, e As EventArgs) Handles btnadd.Click
         fun_addnew()
+        welcomemsg.Text = ""
     End Sub
     Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
         edit()
@@ -556,14 +558,93 @@ Public Class frmroomsData
         btnupdate.Enabled = True
     End Sub
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnsave_reser.Click
-        status_lbl.Text = "Reserved"
-        insert_reserve()
-        update_reserve_status()
-        getdata_reserve()
-        getdata_roomsdetails()
+        If customerRnumber_txt.Text = String.Empty Then
+            MsgBox("Select Available Room from List")
+        Else
+            status_lbl.Text = "Reserved"
+            insert_reserve()
+            update_reserve_status()
+            getdata_reserve()
+            getdata_roomsdetails()
+            addnew_reservation()
+        End If
     End Sub
 
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        frmdashboard.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub reservation_Grid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles reservation_Grid.CellContentClick
+        customerRnumber_txt.Enabled = True
+    End Sub
+
+    Private Sub TabPage5_Click(sender As Object, e As EventArgs) Handles TabPage5.Click
+
+    End Sub
+
+    Private Sub TabPage5_Enter(sender As Object, e As EventArgs) Handles TabPage5.Enter
+        search_txt_grid()
+    End Sub
+
+    Private Sub reservedgrid_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles reservedgrid.MouseDoubleClick
+        Try
+            TabControl1.SelectedTab = TabPage2
+            btnupdate_rserv.Enabled = True
+            btndelete_rserve.Enabled = True
+            Me.entry_txt.Text = reservedgrid.CurrentRow.Cells(0).Value.ToString
+            Me.customer_txt.Text = reservedgrid.CurrentRow.Cells(1).Value.ToString
+            Me.customerRnumber_txt.Text = reservedgrid.CurrentRow.Cells(2).Value.ToString
+            Me.re_roomtype_txt.Text = reservedgrid.CurrentRow.Cells(3).Value.ToString
+            Me.re_customer_txt.Text = reservedgrid.CurrentRow.Cells(4).Value.ToString
+            Me.re_checkin_dte.Value = reservedgrid.CurrentRow.Cells(5).Value.ToString
+            Me.re_address_txt.Text = reservedgrid.CurrentRow.Cells(6).Value.ToString
+            Me.phonenumber_txt.Text = reservedgrid.CurrentRow.Cells(7).Value.ToString
+            Me.price_txt.Text = reservedgrid.CurrentRow.Cells(8).Value.ToString
+
+
+        Catch ex As Exception
+            MessageBox.Show("Failed:Selected Value of Cellcontent", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Me.Dispose()
+        End Try
+    End Sub
+
+    Private Sub Button6_MouseClick(sender As Object, e As MouseEventArgs) Handles Button6.MouseClick
+
+    End Sub
+
+    Private Sub reservedgrid_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles reservedgrid.CellMouseClick
+        Me.entry_txt.Text = reservedgrid.CurrentRow.Cells(0).Value.ToString
+        Me.customer_txt.Text = reservedgrid.CurrentRow.Cells(1).Value.ToString
+        Me.customerRnumber_txt.Text = reservedgrid.CurrentRow.Cells(2).Value.ToString
+        Me.re_roomtype_txt.Text = reservedgrid.CurrentRow.Cells(3).Value.ToString
+        Me.re_customer_txt.Text = reservedgrid.CurrentRow.Cells(4).Value.ToString
+        Me.re_checkin_dte.Value = reservedgrid.CurrentRow.Cells(5).Value.ToString
+        Me.re_address_txt.Text = reservedgrid.CurrentRow.Cells(6).Value.ToString
+        Me.phonenumber_txt.Text = reservedgrid.CurrentRow.Cells(7).Value.ToString
+        Me.price_txt.Text = reservedgrid.CurrentRow.Cells(8).Value.ToString
+    End Sub
+
+
+    Private Sub TabPage2_Enter(sender As Object, e As EventArgs) Handles TabPage2.Enter
+        getdata_reserve()
+    End Sub
+
+
+
+    Private Sub TabPage3_Enter(sender As Object, e As EventArgs) Handles TabPage3.Enter
+
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
+    End Sub
+
+    Private Sub TabPage1_Enter(sender As Object, e As EventArgs) Handles TabPage1.Enter
+        getdata()
     End Sub
 End Class

@@ -179,8 +179,13 @@ Public Class AddUsers
         update2()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Frmlogin.ShowDialog()
         Me.Close()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
+        AdminPanel.Show()
+        Me.Dispose()
     End Sub
 End Class

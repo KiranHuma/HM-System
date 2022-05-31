@@ -429,6 +429,7 @@ Partial Class frmdashboard
         Me.username_lbl.Size = New System.Drawing.Size(59, 17)
         Me.username_lbl.TabIndex = 404
         Me.username_lbl.Text = "Label17"
+        Me.username_lbl.Visible = False
         '
         'frmdashboard
         '

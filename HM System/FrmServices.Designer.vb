@@ -23,15 +23,14 @@ Partial Class FrmServices
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmServices))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmServices))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.closee = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.welcomemsg = New System.Windows.Forms.Label()
@@ -51,6 +50,8 @@ Partial Class FrmServices
         Me.btndel = New System.Windows.Forms.Button()
         Me.btnsave = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.closee = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.servicereg_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,7 +69,8 @@ Partial Class FrmServices
         '
         'TabPage1
         '
-        Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.closee)
         Me.TabPage1.Controls.Add(Me.Label7)
         Me.TabPage1.Controls.Add(Me.TextBox1)
@@ -94,20 +96,6 @@ Partial Class FrmServices
         Me.TabPage1.Size = New System.Drawing.Size(1319, 718)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Register Services"
-        '
-        'closee
-        '
-        Me.closee.BackColor = System.Drawing.SystemColors.Control
-        Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
-        Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.closee.ForeColor = System.Drawing.SystemColors.Control
-        Me.closee.Location = New System.Drawing.Point(1265, 20)
-        Me.closee.Margin = New System.Windows.Forms.Padding(4)
-        Me.closee.Name = "closee"
-        Me.closee.Size = New System.Drawing.Size(34, 33)
-        Me.closee.TabIndex = 394
-        Me.closee.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -330,6 +318,32 @@ Partial Class FrmServices
         Me.btnsave.Text = "Save"
         Me.btnsave.UseVisualStyleBackColor = False
         '
+        'closee
+        '
+        Me.closee.BackColor = System.Drawing.Color.Transparent
+        Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
+        Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.closee.ForeColor = System.Drawing.Color.Transparent
+        Me.closee.Location = New System.Drawing.Point(1265, 20)
+        Me.closee.Margin = New System.Windows.Forms.Padding(4)
+        Me.closee.Name = "closee"
+        Me.closee.Size = New System.Drawing.Size(34, 33)
+        Me.closee.TabIndex = 394
+        Me.closee.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.Transparent
+        Me.Button1.Image = Global.HM_System.My.Resources.Resources.back_641px
+        Me.Button1.Location = New System.Drawing.Point(22, 20)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(42, 43)
+        Me.Button1.TabIndex = 401
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'FrmServices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -372,4 +386,5 @@ Partial Class FrmServices
     Friend WithEvents Label7 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents closee As Button
+    Friend WithEvents Button1 As Button
 End Class

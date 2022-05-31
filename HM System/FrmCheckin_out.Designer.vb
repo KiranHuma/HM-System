@@ -35,6 +35,7 @@ Partial Class FrmCheckin_out
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.trandteto_txt = New System.Windows.Forms.DateTimePicker()
         Me.trandtefrom_txt = New System.Windows.Forms.DateTimePicker()
@@ -66,6 +67,7 @@ Partial Class FrmCheckin_out
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.trandteto_txt)
         Me.TabPage1.Controls.Add(Me.trandtefrom_txt)
@@ -79,6 +81,18 @@ Partial Class FrmCheckin_out
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Customer/CheckIn Details"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Image = Global.HM_System.My.Resources.Resources.back_641px
+        Me.Button1.Location = New System.Drawing.Point(9, 7)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(42, 43)
+        Me.Button1.TabIndex = 400
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
@@ -253,8 +267,8 @@ Partial Class FrmCheckin_out
         DataGridViewCellStyle7.BackColor = System.Drawing.Color.RoyalBlue
         DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -327,4 +341,5 @@ Partial Class FrmCheckin_out
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Button1 As Button
 End Class

@@ -23,20 +23,20 @@ Partial Class AdminPanel
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminPanel))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminPanel))
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.closee = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.closee = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -49,20 +49,6 @@ Partial Class AdminPanel
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Hotel Dashboard"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'closee
-        '
-        Me.closee.BackColor = System.Drawing.Color.Transparent
-        Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
-        Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.closee.ForeColor = System.Drawing.SystemColors.Control
-        Me.closee.Location = New System.Drawing.Point(829, 13)
-        Me.closee.Margin = New System.Windows.Forms.Padding(4)
-        Me.closee.Name = "closee"
-        Me.closee.Size = New System.Drawing.Size(34, 33)
-        Me.closee.TabIndex = 394
-        Me.closee.UseVisualStyleBackColor = False
         '
         'DataGridView1
         '
@@ -130,18 +116,18 @@ Partial Class AdminPanel
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem, Me.UpdateToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(211, 80)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(128, 52)
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(210, 24)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(127, 24)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'UpdateToolStripMenuItem
         '
         Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
-        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(210, 24)
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(127, 24)
         Me.UpdateToolStripMenuItem.Text = "Update"
         '
         'Button1
@@ -163,10 +149,25 @@ Partial Class AdminPanel
         Me.Label1.TabIndex = 398
         Me.Label1.Text = "Update"
         '
+        'closee
+        '
+        Me.closee.BackColor = System.Drawing.Color.Transparent
+        Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
+        Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.closee.ForeColor = System.Drawing.Color.Transparent
+        Me.closee.Location = New System.Drawing.Point(829, 13)
+        Me.closee.Margin = New System.Windows.Forms.Padding(4)
+        Me.closee.Name = "closee"
+        Me.closee.Size = New System.Drawing.Size(34, 33)
+        Me.closee.TabIndex = 394
+        Me.closee.UseVisualStyleBackColor = False
+        '
         'AdminPanel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(876, 698)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)

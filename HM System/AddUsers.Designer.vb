@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AddUsers
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class AddUsers
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddUsers))
         Me.Label13 = New System.Windows.Forms.Label()
@@ -52,7 +52,6 @@ Partial Class AddUsers
         Me.panel1 = New System.Windows.Forms.Panel()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -357,6 +356,7 @@ Partial Class AddUsers
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"admin", "user"})
         Me.ComboBox1.Location = New System.Drawing.Point(206, 213)
@@ -374,21 +374,6 @@ Partial Class AddUsers
         Me.Label15.Size = New System.Drawing.Size(39, 20)
         Me.Label15.TabIndex = 32
         Me.Label15.Text = "Role"
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Button3.Enabled = False
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Button3.Location = New System.Drawing.Point(716, 405)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(90, 34)
-        Me.Button3.TabIndex = 30
-        Me.Button3.Text = "Login"
-        Me.Button3.UseVisualStyleBackColor = False
-        Me.Button3.Visible = False
         '
         'Label14
         '
@@ -408,7 +393,6 @@ Partial Class AddUsers
         Me.ClientSize = New System.Drawing.Size(818, 652)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.panel1)
-        Me.Controls.Add(Me.Button3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AddUsers"
@@ -449,7 +433,6 @@ Partial Class AddUsers
     Friend WithEvents Label14 As Label
     Friend WithEvents label7 As Label
     Friend WithEvents button2 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents ComboBox1 As ComboBox
     Private WithEvents Label15 As Label
 End Class

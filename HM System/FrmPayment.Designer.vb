@@ -31,6 +31,7 @@ Partial Class FrmPayment
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -101,6 +102,8 @@ Partial Class FrmPayment
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Button4)
         Me.TabPage1.Controls.Add(Me.Button3)
         Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.TextBox7)
@@ -147,13 +150,26 @@ Partial Class FrmPayment
         Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.Label31)
         Me.TabPage1.Controls.Add(Me.Cname_txt)
+        Me.TabPage1.ForeColor = System.Drawing.Color.Black
         Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(1294, 693)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Payment And Check Out"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.White
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Image = Global.HM_System.My.Resources.Resources.back_641px
+        Me.Button4.Location = New System.Drawing.Point(30, 609)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(42, 43)
+        Me.Button4.TabIndex = 401
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'Button3
         '
@@ -201,11 +217,11 @@ Partial Class FrmPayment
         '
         'closee
         '
-        Me.closee.BackColor = System.Drawing.SystemColors.Control
+        Me.closee.BackColor = System.Drawing.Color.White
         Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
         Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.closee.ForeColor = System.Drawing.SystemColors.Control
+        Me.closee.ForeColor = System.Drawing.Color.White
         Me.closee.Location = New System.Drawing.Point(1253, 7)
         Me.closee.Margin = New System.Windows.Forms.Padding(4)
         Me.closee.Name = "closee"
@@ -553,6 +569,7 @@ Partial Class FrmPayment
         '
         'transactionid_txt
         '
+        Me.transactionid_txt.BackColor = System.Drawing.Color.White
         Me.transactionid_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.transactionid_txt.ForeColor = System.Drawing.SystemColors.InfoText
         Me.transactionid_txt.Location = New System.Drawing.Point(155, 60)
@@ -592,6 +609,7 @@ Partial Class FrmPayment
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.White
         Me.TabPage2.Controls.Add(Me.Label8)
         Me.TabPage2.Controls.Add(Me.TextBox4)
         Me.TabPage2.Controls.Add(Me.payment_Grid)
@@ -601,7 +619,6 @@ Partial Class FrmPayment
         Me.TabPage2.Size = New System.Drawing.Size(1294, 693)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Record"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -753,4 +770,5 @@ Partial Class FrmPayment
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class

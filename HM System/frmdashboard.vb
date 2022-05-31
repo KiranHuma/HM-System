@@ -193,10 +193,12 @@ Public Class frmdashboard
 
     Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
         FrmServices.Show()
+        Me.Close()
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
         FrmCheckin_out.Show()
+        Me.Close()
     End Sub
 
     Private Sub TextBox2_MouseHover(sender As Object, e As EventArgs) Handles TextBox2.MouseHover
@@ -218,6 +220,7 @@ Public Class frmdashboard
     End Sub
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
         frmroomsData.Show()
+        Me.Close()
     End Sub
 
     Private Sub closee_Click(sender As Object, e As EventArgs)
@@ -226,6 +229,7 @@ Public Class frmdashboard
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
         FrmPayment.Show()
+        Me.Close()
     End Sub
     Private Sub frmdashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Label16.Text = Format(Now, "yyyy-MM-dd")

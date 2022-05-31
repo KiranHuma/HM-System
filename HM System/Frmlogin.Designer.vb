@@ -25,28 +25,29 @@ Partial Class Frmlogin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frmlogin))
         Me.selectUser = New System.Windows.Forms.ComboBox()
         Me.panel3 = New System.Windows.Forms.Panel()
-        Me.pictureBox3 = New System.Windows.Forms.PictureBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.pictureBox2 = New System.Windows.Forms.PictureBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.label6 = New System.Windows.Forms.Label()
         Me.loginBtn = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.pictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.pictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.panel3.SuspendLayout()
-        CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'selectUser
         '
-        Me.selectUser.BackColor = System.Drawing.SystemColors.Control
+        Me.selectUser.BackColor = System.Drawing.Color.White
+        Me.selectUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.selectUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.selectUser.ForeColor = System.Drawing.Color.Black
         Me.selectUser.FormattingEnabled = True
@@ -58,7 +59,7 @@ Partial Class Frmlogin
         '
         'panel3
         '
-        Me.panel3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.panel3.BackColor = System.Drawing.Color.White
         Me.panel3.Controls.Add(Me.pictureBox3)
         Me.panel3.Controls.Add(Me.txtPass)
         Me.panel3.Location = New System.Drawing.Point(333, 513)
@@ -66,19 +67,9 @@ Partial Class Frmlogin
         Me.panel3.Size = New System.Drawing.Size(272, 37)
         Me.panel3.TabIndex = 78
         '
-        'pictureBox3
-        '
-        Me.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pictureBox3.Image = CType(resources.GetObject("pictureBox3.Image"), System.Drawing.Image)
-        Me.pictureBox3.Location = New System.Drawing.Point(239, 2)
-        Me.pictureBox3.Name = "pictureBox3"
-        Me.pictureBox3.Size = New System.Drawing.Size(27, 26)
-        Me.pictureBox3.TabIndex = 2
-        Me.pictureBox3.TabStop = False
-        '
         'txtPass
         '
-        Me.txtPass.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.txtPass.BackColor = System.Drawing.Color.White
         Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPass.Font = New System.Drawing.Font("Trebuchet MS", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.ForeColor = System.Drawing.Color.Black
@@ -93,7 +84,7 @@ Partial Class Frmlogin
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel4.BackColor = System.Drawing.Color.White
         Me.Panel4.Controls.Add(Me.pictureBox2)
         Me.Panel4.Controls.Add(Me.txtUsername)
         Me.Panel4.Location = New System.Drawing.Point(333, 470)
@@ -101,19 +92,9 @@ Partial Class Frmlogin
         Me.Panel4.Size = New System.Drawing.Size(272, 37)
         Me.Panel4.TabIndex = 77
         '
-        'pictureBox2
-        '
-        Me.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pictureBox2.Image = CType(resources.GetObject("pictureBox2.Image"), System.Drawing.Image)
-        Me.pictureBox2.Location = New System.Drawing.Point(239, 3)
-        Me.pictureBox2.Name = "pictureBox2"
-        Me.pictureBox2.Size = New System.Drawing.Size(27, 27)
-        Me.pictureBox2.TabIndex = 2
-        Me.pictureBox2.TabStop = False
-        '
         'txtUsername
         '
-        Me.txtUsername.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.txtUsername.BackColor = System.Drawing.Color.White
         Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsername.Font = New System.Drawing.Font("Trebuchet MS", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.ForeColor = System.Drawing.Color.Black
@@ -153,19 +134,6 @@ Partial Class Frmlogin
         Me.loginBtn.Text = "&Login"
         Me.loginBtn.UseVisualStyleBackColor = False
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(662, 398)
-        Me.Panel1.TabIndex = 33
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -193,6 +161,41 @@ Partial Class Frmlogin
         Me.Label3.TabIndex = 82
         Me.Label3.Text = "Password"
         '
+        'pictureBox3
+        '
+        Me.pictureBox3.BackColor = System.Drawing.Color.White
+        Me.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pictureBox3.Image = CType(resources.GetObject("pictureBox3.Image"), System.Drawing.Image)
+        Me.pictureBox3.Location = New System.Drawing.Point(239, 2)
+        Me.pictureBox3.Name = "pictureBox3"
+        Me.pictureBox3.Size = New System.Drawing.Size(27, 26)
+        Me.pictureBox3.TabIndex = 2
+        Me.pictureBox3.TabStop = False
+        '
+        'pictureBox2
+        '
+        Me.pictureBox2.BackColor = System.Drawing.Color.White
+        Me.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pictureBox2.Image = CType(resources.GetObject("pictureBox2.Image"), System.Drawing.Image)
+        Me.pictureBox2.Location = New System.Drawing.Point(239, 3)
+        Me.pictureBox2.Name = "pictureBox2"
+        Me.pictureBox2.Size = New System.Drawing.Size(27, 27)
+        Me.pictureBox2.TabIndex = 2
+        Me.pictureBox2.TabStop = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.Label13)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(662, 398)
+        Me.Panel1.TabIndex = 33
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -209,6 +212,7 @@ Partial Class Frmlogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(662, 674)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -226,9 +230,9 @@ Partial Class Frmlogin
         Me.Text = "Frmlogin"
         Me.panel3.ResumeLayout(False)
         Me.panel3.PerformLayout()
-        CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
