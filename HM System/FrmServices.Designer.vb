@@ -23,14 +23,15 @@ Partial Class FrmServices
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmServices))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmServices))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.closee = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.welcomemsg = New System.Windows.Forms.Label()
@@ -50,7 +51,6 @@ Partial Class FrmServices
         Me.btndel = New System.Windows.Forms.Button()
         Me.btnsave = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.closee = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.servicereg_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,6 +95,20 @@ Partial Class FrmServices
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Register Services"
         '
+        'closee
+        '
+        Me.closee.BackColor = System.Drawing.SystemColors.Control
+        Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
+        Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.closee.ForeColor = System.Drawing.SystemColors.Control
+        Me.closee.Location = New System.Drawing.Point(1265, 20)
+        Me.closee.Margin = New System.Windows.Forms.Padding(4)
+        Me.closee.Name = "closee"
+        Me.closee.Size = New System.Drawing.Size(34, 33)
+        Me.closee.TabIndex = 394
+        Me.closee.UseVisualStyleBackColor = False
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -127,36 +141,36 @@ Partial Class FrmServices
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
         Me.servicereg_Grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.servicereg_Grid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.servicereg_Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.servicereg_Grid.BackgroundColor = System.Drawing.Color.LightCoral
+        Me.servicereg_Grid.BackgroundColor = System.Drawing.Color.RoyalBlue
         Me.servicereg_Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.servicereg_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.RoyalBlue
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.servicereg_Grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.servicereg_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.servicereg_Grid.DefaultCellStyle = DataGridViewCellStyle3
         Me.servicereg_Grid.EnableHeadersVisualStyles = False
-        Me.servicereg_Grid.GridColor = System.Drawing.Color.LightCoral
+        Me.servicereg_Grid.GridColor = System.Drawing.Color.RoyalBlue
         Me.servicereg_Grid.Location = New System.Drawing.Point(679, 132)
         Me.servicereg_Grid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.servicereg_Grid.Name = "servicereg_Grid"
@@ -164,16 +178,16 @@ Partial Class FrmServices
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.RoyalBlue
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.servicereg_Grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.servicereg_Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.RoyalBlue
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
         Me.servicereg_Grid.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.servicereg_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -316,20 +330,6 @@ Partial Class FrmServices
         Me.btnsave.Text = "Save"
         Me.btnsave.UseVisualStyleBackColor = False
         '
-        'closee
-        '
-        Me.closee.BackColor = System.Drawing.SystemColors.Control
-        Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
-        Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.closee.ForeColor = System.Drawing.SystemColors.Control
-        Me.closee.Location = New System.Drawing.Point(1265, 20)
-        Me.closee.Margin = New System.Windows.Forms.Padding(4)
-        Me.closee.Name = "closee"
-        Me.closee.Size = New System.Drawing.Size(34, 33)
-        Me.closee.TabIndex = 394
-        Me.closee.UseVisualStyleBackColor = False
-        '
         'FrmServices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -338,6 +338,7 @@ Partial Class FrmServices
         Me.ClientSize = New System.Drawing.Size(1327, 754)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmServices"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmServices"

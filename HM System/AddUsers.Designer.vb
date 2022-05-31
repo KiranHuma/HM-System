@@ -22,6 +22,7 @@ Partial Class AddUsers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddUsers))
         Me.Label13 = New System.Windows.Forms.Label()
         Me.score_txt = New System.Windows.Forms.Label()
         Me.CmboGender = New System.Windows.Forms.TextBox()
@@ -120,7 +121,7 @@ Partial Class AddUsers
         '
         'panel2
         '
-        Me.panel2.BackColor = System.Drawing.Color.Indigo
+        Me.panel2.BackColor = System.Drawing.Color.RoyalBlue
         Me.panel2.Location = New System.Drawing.Point(3, 138)
         Me.panel2.Name = "panel2"
         Me.panel2.Size = New System.Drawing.Size(576, 11)
@@ -192,7 +193,7 @@ Partial Class AddUsers
         '
         'button2
         '
-        Me.button2.BackColor = System.Drawing.Color.Indigo
+        Me.button2.BackColor = System.Drawing.Color.RoyalBlue
         Me.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.button2.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.button2.ForeColor = System.Drawing.Color.White
@@ -323,7 +324,6 @@ Partial Class AddUsers
         Me.panel1.BackColor = System.Drawing.Color.White
         Me.panel1.Controls.Add(Me.ComboBox1)
         Me.panel1.Controls.Add(Me.Label15)
-        Me.panel1.Controls.Add(Me.Button3)
         Me.panel1.Controls.Add(Me.Label14)
         Me.panel1.Controls.Add(Me.score_txt)
         Me.panel1.Controls.Add(Me.CmboGender)
@@ -377,11 +377,12 @@ Partial Class AddUsers
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.Indigo
+        Me.Button3.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button3.Enabled = False
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(206, 548)
+        Me.Button3.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Button3.Location = New System.Drawing.Point(716, 405)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(90, 34)
         Me.Button3.TabIndex = 30
@@ -403,10 +404,13 @@ Partial Class AddUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.RoyalBlue
         Me.ClientSize = New System.Drawing.Size(818, 652)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.panel1)
+        Me.Controls.Add(Me.Button3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AddUsers"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AddUsers"

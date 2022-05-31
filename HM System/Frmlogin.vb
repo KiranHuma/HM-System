@@ -19,6 +19,7 @@ Public Class Frmlogin
     Dim cmd As New SqlClient.SqlCommand
     Dim dt As New DataTable
     Dim cs As String = "Data Source=ANIRUDH;Initial Catalog=db_hmsystem;Integrated Security=True"
+    ' Dim cs As String = "Data Source=MITTA-MISHAL;Initial Catalog=db_hmsystem;Integrated Security=True"
     'Database Connection
     Private Sub dbaccessconnection()
         Try
@@ -69,5 +70,9 @@ Public Class Frmlogin
 
     Private Sub Frmlogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+        Me.Close()
     End Sub
 End Class

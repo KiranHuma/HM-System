@@ -36,17 +36,19 @@ Partial Class Frmlogin
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.panel3.SuspendLayout()
         CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'selectUser
         '
         Me.selectUser.BackColor = System.Drawing.SystemColors.Control
         Me.selectUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.selectUser.ForeColor = System.Drawing.Color.LightCoral
+        Me.selectUser.ForeColor = System.Drawing.Color.Black
         Me.selectUser.FormattingEnabled = True
         Me.selectUser.Items.AddRange(New Object() {"User", "Admin"})
         Me.selectUser.Location = New System.Drawing.Point(333, 431)
@@ -79,7 +81,7 @@ Partial Class Frmlogin
         Me.txtPass.BackColor = System.Drawing.Color.WhiteSmoke
         Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPass.Font = New System.Drawing.Font("Trebuchet MS", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.ForeColor = System.Drawing.Color.LightCoral
+        Me.txtPass.ForeColor = System.Drawing.Color.Black
         Me.txtPass.Location = New System.Drawing.Point(5, 6)
         Me.txtPass.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtPass.Multiline = True
@@ -114,7 +116,7 @@ Partial Class Frmlogin
         Me.txtUsername.BackColor = System.Drawing.Color.WhiteSmoke
         Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsername.Font = New System.Drawing.Font("Trebuchet MS", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.ForeColor = System.Drawing.Color.LightCoral
+        Me.txtUsername.ForeColor = System.Drawing.Color.Black
         Me.txtUsername.Location = New System.Drawing.Point(6, 4)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtUsername.Multiline = True
@@ -135,7 +137,7 @@ Partial Class Frmlogin
         '
         'loginBtn
         '
-        Me.loginBtn.BackColor = System.Drawing.Color.LightCoral
+        Me.loginBtn.BackColor = System.Drawing.Color.RoyalBlue
         Me.loginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed
@@ -154,8 +156,9 @@ Partial Class Frmlogin
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel1.BackgroundImage = Global.HM_System.My.Resources.Resources.hotel
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
@@ -190,6 +193,18 @@ Partial Class Frmlogin
         Me.Label3.TabIndex = 82
         Me.Label3.Text = "Password"
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label13.ForeColor = System.Drawing.Color.Red
+        Me.Label13.Location = New System.Drawing.Point(628, 9)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(31, 29)
+        Me.Label13.TabIndex = 83
+        Me.Label13.Text = "X"
+        '
         'Frmlogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -205,6 +220,7 @@ Partial Class Frmlogin
         Me.Controls.Add(Me.loginBtn)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Frmlogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Frmlogin"
@@ -214,6 +230,8 @@ Partial Class Frmlogin
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -231,4 +249,5 @@ Partial Class Frmlogin
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Private WithEvents Label13 As Label
 End Class
